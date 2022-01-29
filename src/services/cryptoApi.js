@@ -6,6 +6,11 @@ const cryptoApiHeaders = {
   'x-rapidapi-host': process.env.REACT_APP_CRYPTO_RAPIDAPI_HOST,
   'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
 };
+
+// 'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
+// 'x-rapidapi-key': '22e6efef80msh70156ef75103547p1db60djsnad2eb1ebe17c'
+
+
 const createRequest = (url) => ({ url, headers: cryptoApiHeaders });
 
 export const cryptoApi = createApi({
@@ -26,9 +31,9 @@ export const cryptoApi = createApi({
     }),
 
     // Note: To access this endpoint you need premium plan
-    getExchanges: builder.query({
-      query: () => createRequest('/exchanges'),
-    }),
+    // getExchanges: builder.query({
+    //   query: () => createRequest('/exchanges'),
+    // }),
   }),
 });
 
